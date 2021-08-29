@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  width: 100%;
+
+  display: flex;
+
+  color: white;
+}
+
+.card {
+  display: flex;
+  min-width: 50rem;
+  max-width: 50rem;
+  background-color: rgba(0, 0, 0, 0.267);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0);
+}
+
+.text-answer {
+  display: flex;
+  text-align: start;
+  cursor: pointer;
+}
+.text-answer:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0);
+}
+
+.text-question {
+  font-size: 2rem;
+  text-align: center;
+}
