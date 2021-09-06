@@ -11,7 +11,7 @@ var score = 0;
 var currentQuestion = 0;
 let correctAnswer = "";
 
-axios.get("http://localhost:3000/questions").then(function (data) {
+axios.get("https://my-json-server.typicode.com/vlarysc/fakeAPI-Quiz/questions").then(function (data) {
   console.log(data.data.map((data) => data.question));
 
   const question = data.data[currentQuestion].question;
@@ -61,7 +61,7 @@ function validateAnswer() {
   if (this.id == correctAnswer) {
     score += 1;
 
-    axios.get("http://localhost:3000/questions").then(function (data) {
+    axios.get("https://my-json-server.typicode.com/vlarysc/fakeAPI-Quiz/questions").then(function (data) {
       console.log(data.data.map((data) => data.question));
 
       const question = data.data[currentQuestion].question;
@@ -123,7 +123,7 @@ function validateAnswer() {
       }
     });
   } else {
-    axios.get("http://localhost:3000/questions").then(function (data) {
+    axios.get("https://my-json-server.typicode.com/vlarysc/fakeAPI-Quiz/questions").then(function (data) {
       console.log(data.data.map((data) => data.question));
 
       const question = data.data[currentQuestion].question;
@@ -190,7 +190,7 @@ function validateAnswer() {
 function newQuestion() {
   if(currentQuestion <= 8) {
     currentQuestion += 1;
-    axios.get("http://localhost:3000/questions").then(function (data) {
+    axios.get("https://my-json-server.typicode.com/vlarysc/fakeAPI-Quiz/questions").then(function (data) {
       console.log(data.data.map((data) => data.question));
   
       const question = data.data[currentQuestion].question;
