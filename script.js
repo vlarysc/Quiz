@@ -188,31 +188,40 @@ function validateAnswer() {
 }
 
 function newQuestion() {
-  currentQuestion += 1;
-  axios.get("http://localhost:3000/questions").then(function (data) {
-    console.log(data.data.map((data) => data.question));
+  if(currentQuestion <= 8) {
+    currentQuestion += 1;
+    axios.get("http://localhost:3000/questions").then(function (data) {
+      console.log(data.data.map((data) => data.question));
+  
+      const question = data.data[currentQuestion].question;
+      const answerA = data.data[currentQuestion].answerA;
+      const answerB = data.data[currentQuestion].answerB;
+      const answerC = data.data[currentQuestion].answerC;
+      const answerD = data.data[currentQuestion].answerD;
+      const answerE = data.data[currentQuestion].answerE;
+  
+      correctAnswer = data.data[currentQuestion].correct_answer;
+      questionEl.innerHTML = question;
+      answer_aEl.innerHTML = `a) ${answerA}`;
+      answer_bEl.innerHTML = `b) ${answerB}`;
+      answer_cEl.innerHTML = `c) ${answerC}`;
+      answer_dEl.innerHTML = `d) ${answerD}`;
+      answer_eEl.innerHTML = `e) ${answerE}`;
+    });
+    const answersEl = document.getElementById("answers");
+    const questionsEl = document.getElementById("questions");
+  
+    questionsEl.classList.remove("visible");
+    answersEl.classList.add("visible");
+  }else {
+    const quizEl = document.getElementById("quiz");
+    const congratulationsEl = document.getElementById("congratulations");
 
-    const question = data.data[currentQuestion].question;
-    const answerA = data.data[currentQuestion].answerA;
-    const answerB = data.data[currentQuestion].answerB;
-    const answerC = data.data[currentQuestion].answerC;
-    const answerD = data.data[currentQuestion].answerD;
-    const answerE = data.data[currentQuestion].answerE;
-
-    correctAnswer = data.data[currentQuestion].correct_answer;
-    questionEl.innerHTML = question;
-    answer_aEl.innerHTML = `a) ${answerA}`;
-    answer_bEl.innerHTML = `b) ${answerB}`;
-    answer_cEl.innerHTML = `c) ${answerC}`;
-    answer_dEl.innerHTML = `d) ${answerD}`;
-    answer_eEl.innerHTML = `e) ${answerE}`;
-  });
-  const answersEl = document.getElementById("answers");
-  const questionsEl = document.getElementById("questions");
-
-  questionsEl.classList.remove("visible");
-
-  answersEl.classList.add("visible");
+    quizEl.classList.add("visible");
+    congratulationsEl.innerHTML = `Parabéns você concluiu o quiz`
+    congratulationsEl.classList.remove("visible");
+  }
+  
 }
 
 const answers = document.querySelectorAll(".text-answer");
