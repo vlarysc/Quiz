@@ -23,6 +23,14 @@ h1 {
   color: white;
 }
 
+#score {
+  font-size: 27px;
+  color: white;
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+}
+
 .container {
   width: 100%;
 
@@ -43,6 +51,8 @@ h1 {
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0);
+  animation: opacityEffect 2.5s;
+  transition: 5s;
 }
 
 .text-answer {
@@ -57,4 +67,37 @@ h1 {
 .text-question {
   font-size: 2rem;
   text-align: center;
+}
+
+/* Explanation */
+
+.btn-keep {
+  /* width: 40%; */
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.visible {
+  display: none;
+}
+
+/* Effect */
+
+@keyframes opacityEffect {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
