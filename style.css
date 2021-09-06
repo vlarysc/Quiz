@@ -69,6 +69,10 @@ h1 {
   text-align: center;
 }
 
+.visible {
+  display: none;
+}
+
 /* Explanation */
 
 .btn-keep {
@@ -86,8 +90,10 @@ h1 {
   font-weight: 900;
 }
 
-.visible {
-  display: none;
+.chose {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: space-evenly;
 }
 
 /* Effect */

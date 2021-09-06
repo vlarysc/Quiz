@@ -33,19 +33,19 @@ axios.get("http://localhost:3000/questions").then(function (data) {
   function correctAnswerValidate() {
     switch (correctAnswer.split("r").pop().toLocaleUpperCase()) {
       case "A":
-        return `A resposta correta é a letra : <br> <br> A) ${answerA}`;
+        return `Resposta correta: ${answerA}`;
         break;
       case "B":
-        return `A resposta correta é a letra : <br> <br> B) ${answerB}`;
+        return `Resposta correta: ${answerB}`;
         break;
       case "C":
-        return `A resposta correta é a letra : <br> <br> C) ${answerC}`;
+        return `Resposta correta: ${answerC}`;
         break;
       case "D":
-        return `A resposta correta é a letra : <br> <br> D) ${answerD}`;
+        return `Resposta correta: ${answerD}`;
         break;
       case "E":
-        return `A resposta correta é a letra : <br> <br> E) ${answerE}`;
+        return `Resposta correta: ${answerE}`;
     }
   }
 });
@@ -87,38 +87,38 @@ function validateAnswer() {
       function correctAnswerValidate() {
         switch (correctAnswer.split("r").pop().toLocaleUpperCase()) {
           case "A":
-            return `A resposta correta é a letra : <br> <br> A) ${answerA}`;
+            return `Resposta correta: ${answerA}`;
             break;
           case "B":
-            return `A resposta correta é a letra : <br> <br> B) ${answerB}`;
+            return `Resposta correta: ${answerB}`;
             break;
           case "C":
-            return `A resposta correta é a letra : <br> <br> C) ${answerC}`;
+            return `Resposta correta: ${answerC}`;
             break;
           case "D":
-            return `A resposta correta é a letra : <br> <br> D) ${answerD}`;
+            return `Resposta correta: ${answerD}`;
             break;
           case "E":
-            return `A resposta correta é a letra : <br> <br> E) ${answerE}`;
+            return `Resposta correta: ${answerE}`;
         }
       }
 
       function answerChosedValidate() {
         switch (answerChosed.split("r").pop().toLocaleUpperCase()) {
           case "A":
-            return `Você escolheu a: <br> <br> A) ${answerA}`;
+            return `Você escolheu: ${answerA}`;
             break;
           case "B":
-            return `Você escolheu a: <br> <br> B) ${answerB}`;
+            return `Você escolheu: ${answerB}`;
             break;
           case "C":
-            return `Você escolheu a: <br> <br> C) ${answerC}`;
+            return `Você escolheu: ${answerC}`;
             break;
           case "D":
-            return `Você escolheu a: <br> <br> D) ${answerD}`;
+            return `Você escolheu: ${answerD}`;
             break;
           case "E":
-            return `Você escolheu a: <br> <br> E) ${answerE}`;
+            return `Você escolheu: ${answerE}`;
         }
       }
     });
@@ -149,38 +149,38 @@ function validateAnswer() {
       function correctAnswerValidate() {
         switch (correctAnswer.split("r").pop().toLocaleUpperCase()) {
           case "A":
-            return `A resposta correta é a letra : <br> <br> A) ${answerA}`;
+            return `Resposta correta: ${answerA}`;
             break;
           case "B":
-            return `A resposta correta é a letra : <br> <br> B) ${answerB}`;
+            return `Resposta correta: ${answerB}`;
             break;
           case "C":
-            return `A resposta correta é a letra : <br> <br> C) ${answerC}`;
+            return `Resposta correta: ${answerC}`;
             break;
           case "D":
-            return `A resposta correta é a letra : <br> <br> D) ${answerD}`;
+            return `Resposta correta: ${answerD}`;
             break;
           case "E":
-            return `A resposta correta é a letra : <br> <br> E) ${answerE}`;
+            return `Resposta correta: ${answerE}`;
         }
       }
 
       function answerChosedValidate() {
         switch (answerChosed.split("r").pop().toLocaleUpperCase()) {
           case "A":
-            return `Você escolheu a: <br> <br> A) ${answerA}`;
+            return `Você escolheu: ${answerA}`;
             break;
           case "B":
-            return `Você escolheu a: <br> <br> B) ${answerB}`;
+            return `Você escolheu: ${answerB}`;
             break;
           case "C":
-            return `Você escolheu a: <br> <br> C) ${answerC}`;
+            return `Você escolheu: ${answerC}`;
             break;
           case "D":
-            return `Você escolheu a: <br> <br> D) ${answerD}`;
+            return `Você escolheu: ${answerD}`;
             break;
           case "E":
-            return `Você escolheu a: <br> <br> E) ${answerE}`;
+            return `Você escolheu: ${answerE}`;
         }
       }
     });
