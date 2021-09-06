@@ -8,28 +8,25 @@
     <title>Quiz</title>
   </head>
   <body>
-    <div id="pyro">
-      <div id="score">Pontuação: <strong> 0 </strong></div>
-      <h1 id="quiz">Quiz</h1>
-
-      <h1 id="congratulations" class="visible"></h1>
-      <div class="container">
-        <div class="center-el card" id="questions">
-          <p class="text-question" id="question"></p>
-          <p class="text-answer" id="answerA">A</p>
-          <p class="text-answer" id="answerB">B</p>
-          <p class="text-answer" id="answerC">C</p>
-          <p class="text-answer" id="answerD">D</p>
-          <p class="text-answer" id="answerE">E</p>
+    <div id="score">Pontuação: <strong> 0 </strong></div>
+    <h1 id="quiz">Quiz</h1>
+    <h1 id="congratulations" class="visible"></h1>
+    <div class="container">
+      <div class="center-el card" id="questions">
+        <p class="text-question" id="question"></p>
+        <p class="text-answer" id="answerA">A</p>
+        <p class="text-answer" id="answerB">B</p>
+        <p class="text-answer" id="answerC">C</p>
+        <p class="text-answer" id="answerD">D</p>
+        <p class="text-answer" id="answerE">E</p>
+      </div>
+      <div class="center-el card visible" id="answers">
+        <div class="chose">
+          <p class="chosen-answer" id="chosen-answer"></p>
+          <p class="correct-answer" id="correct-answer"></p>
         </div>
-        <div class="center-el card visible" id="answers">
-          <div class="chose">
-            <p class="chosen-answer" id="chosen-answer"></p>
-            <p class="correct-answer" id="correct-answer"></p>
-          </div>
-          <p id="explanation"></p>
-          <button class="btn-keep" onclick="newQuestion()">Continue</button>
-        </div>
+        <p id="explanation"></p>
+        <button class="btn-keep" onclick="newQuestion()">Continue</button>
       </div>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
